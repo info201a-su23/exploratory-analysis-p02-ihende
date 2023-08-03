@@ -369,13 +369,13 @@ display: none;
 accessibility of abortion care. We are concerned with this topic because
 abortion is very politically controversial which had caused policies and
 regulations to allow/disallow abortion care in certain locations. To
-address these disparities we plan to use and analyze this dataset that
+address these disparities we plan to use and analyze this data set that
 presents key information on the accessibility of abortion clinics from
 various locations in the United States.</p>
 </div>
 <div id="keywords" class="section level3">
 <h3>Keywords</h3>
-<p>Women’s healthcare; location data; accesibility; abortion access</p>
+<p>Women’s healthcare; location data; accessibility; abortion access</p>
 </div>
 <div id="introduction" class="section level3">
 <h3>Introduction</h3>
@@ -388,8 +388,8 @@ locations?</p>
 <p>All of these questions are motivated by the desire to understand the
 clear disparities that have been created surrounding women’s healthcare
 and specifically abortions. In a pursuit of investigating a woman’s
-right to bodily autonomy, analyzing the dataset with the lenses of these
-questions will help us understand more about the geographical
+right to bodily autonomy, analyzing the data set with the lenses of
+these questions will help us understand more about the geographical
 differences in abortion access. This is particularly important because
 of increasing controversy regarding this topic in light of the
 overturning of <strong>Roe v. Wade</strong>. As a topic that has been
@@ -405,14 +405,14 @@ us understand this.</p>
 </div>
 <div id="related-work" class="section level3">
 <h3>Related Work</h3>
-<p>This study focuses on data representing travel durations from cities
-to abortion clinics in the United States. The dataset includes
+<p>This study focuses on data representing travel duration from cities
+to abortion clinics in the United States. The data set includes
 information from clinics, excluding hospitals and physicians, which
 account for about 95% of annual abortions. Researchers obtained clinic
 locations from the Safe Place Project and manually collected the current
 operating status of each clinic. Details on the maximum number of weeks
 into a pregnancy that clinics offer abortion services were sourced from
-clinic websites or direct calls. The dataset comprises 623 operating
+clinic websites or direct calls. The data set comprises 623 operating
 clinics, with only two missing detailed timing information, considered
 to have minimal impact. Alaska and Hawaii were excluded due to air
 travel requirements. Abortion procedure timing was categorized into four
@@ -449,39 +449,47 @@ far is too far? an analysis of driving times to abortion clinics in the
 US”. Here is the link: <a href="https://pudding.cool/2017/09/clinics/" class="uri">https://pudding.cool/2017/09/clinics/</a></p>
 <p>Who collected the data?<br />
 Russell Goldenberg was likely involved in collecting the data</p>
-<p>How was the data collected or generated?<br />
-- Data Source: The data comes from clinics that provide abortion
+<p>How was the data collected or generated?</p>
+<ul>
+<li><p>Data Source: The data comes from clinics that provide abortion
 services in the US. It excluded hospitals and physicians and focused
-only on clinics. - Clinic Location: The location of the clinics were
-obtained from the Safe Place Project -Current Operating Status: The
-current operating status of each clinic was obtained manually, likely
-through direct contact with the clinics. - Timing Information: Detailed
-information regarding timing cut-offs on procedures, i.e., the maximum
-number of weeks into a pregnancy that each clinic will provide abortion
-services, were collected. This information was found on each clinic’s
-website or by directly contacting the clinic. - Geographical Coverage:
-The data is applicable to the contiguous United States. Alaska and
-Hawaii were excluded since they often require air travel, and the focus
-of the analysis was on driving times. - Trimester Breakdown: The timing
-of abortion procedures was divided into four categories: 8 weeks, 12
-weeks, 16 weeks, and 20 weeks. The first two groups fall within the
-first trimester, and the last two fall within the second trimester. -
-Geographical Points: To determine driving times, the contiguous US was
-divided into approximately 4,500 equidistant points. - Nearest Clinic:
-For each geographical point, the nearest clinic providing abortion
-services was identified. - Driving Time Calculation: The driving times
-to the six nearest clinics were calculated for each geographical point.
-In cases where no roads existed within a 20-mile radius of a point, the
-clinic distance from a neighboring point was used. The round-trip
-driving times were rounded down to the nearest hour. - Population
-Filter: City-specific data included only cities with a population
-greater than 50,000 as of 2015. The resulting dataset, contained in the
-“cities.csv” file, provides information for each city, including city
-name, state, city population (as of 2015), latitude, longitude, and
-driving durations to the nearest clinic at various stages of pregnancy
-(8 weeks, 12 weeks, 16 weeks, and 20 weeks+).</p>
+only on clinics.</p></li>
+<li><p>Clinic Location: The location of the clinics were obtained from
+the Safe Place Project</p></li>
+<li><p>Current Operating Status: The current operating status of each
+clinic was obtained manually, likely through direct contact with the
+clinics.</p></li>
+<li><p>Timing Information: Detailed information regarding timing
+cut-offs on procedures, i.e., the maximum number of weeks into a
+pregnancy that each clinic will provide abortion services, were
+collected. This information was found on each clinic’s website or by
+directly contacting the clinic.</p></li>
+<li><p>Geographical Coverage: The data is applicable to the contiguous
+United States. Alaska and Hawaii were excluded since they often require
+air travel, and the focus of the analysis was on driving times.</p></li>
+<li><p>Trimester Breakdown: The timing of abortion procedures was
+divided into four categories: 8 weeks, 12 weeks, 16 weeks, and 20 weeks.
+The first two groups fall within the first trimester, and the last two
+fall within the second trimester.</p></li>
+<li><p>Geographical Points: To determine driving times, the contiguous
+US was divided into approximately 4,500 equidistant points.</p></li>
+<li><p>Nearest Clinic: For each geographical point, the nearest clinic
+providing abortion services was identified.</p></li>
+<li><p>Driving Time Calculation: The driving times to the six nearest
+clinics were calculated for each geographical point. In cases where no
+roads existed within a 20-mile radius of a point, the clinic distance
+from a neighboring point was used. The round-trip driving times were
+rounded down to the nearest hour.</p></li>
+<li><p>Population Filter: City-specific data included only cities with a
+population greater than 50,000 as of 2015.</p></li>
+</ul>
+<p>The resulting data set, contained in the “cities.csv” file, provides
+information for each city, including city name, state, city population
+(as of 2015), latitude, longitude, and driving duration to the nearest
+clinic at various stages of pregnancy (8 weeks, 12 weeks, 16 weeks, and
+20 weeks+).</p>
 <p>Why was the data collected?<br />
-The primary objective was to examine the driving durations from various
+The primary objective was to examine the driving duration from various
 cities to abortion clinics in the United States at different stages of
 pregnancy.</p>
 <p>How many observations (rows) are in your data?<br />
@@ -491,25 +499,25 @@ pregnancy.</p>
 <p>What, if any, ethical questions or questions of power do you need to
 consider when working with this data?</p>
 <ol style="list-style-type: decimal">
-<li>What are the main factors influencing the accesibility of abortion
+<li>What are the main factors influencing the accessibility of abortion
 clinics in different regions?</li>
 <li>How does the geographical distribution of abortion clinics affect
 women’s reproductive choices and healthcare outcomes?</li>
-<li>How can policymakes address the disparities in abortion clinic
-accesibility to ensure equitable reproductive healthcare access for all
+<li>How can policymakers address the disparities in abortion clinic
+accessibility to ensure equitable reproductive healthcare access for all
 woman?</li>
 </ol>
 <p>What are possible limitations or problems with this data?</p>
 <p>The data collected for the analysis of driving times to abortion
 clinics in the US provides valuable insights, but it has several
-limitations. Firstly, the dataset excludes hospitals and physicians,
+limitations. Firstly, the data set excludes hospitals and physicians,
 potentially leading to an incomplete representation of abortion service
 accessibility. Additionally, the timing information relies on data
 obtained from clinics’ websites or through direct contact, which may
 introduce inaccuracies due to potential changes in procedures over time.
 The geographic coverage is limited to the contiguous US, excluding
 Alaska and Hawaii, which may overlook unique challenges faced by
-individuals in these states. Moreover, the dataset filters out cities
+individuals in these states. Moreover, the data set filters out cities
 with populations below 50,000, neglecting the experiences of people in
 smaller towns and rural areas. The driving time calculations are based
 on equidistant points, assuming departure from those specific locations,
@@ -527,20 +535,20 @@ understanding of abortion service accessibility in the US.</p>
 <div id="implications" class="section level3">
 <h3>Implications</h3>
 <p><strong>Technologist</strong></p>
-<p>The implications of technologist in this dataset can affect the way
-the data is collected. For example, in this dataset, the information is
+<p>The implications of technologist in this data set can affect the way
+the data is collected. For example, in this data set, the information is
 collected on the clinic’s website or just by calling in. To make this
 data more streamline, technologist could have provided one way to
 receive this data.</p>
 <p><strong>Designers</strong></p>
 <p>The implications of designers could be how the data is visually
 communicated to the audience. Based on the way they visualize the data,
-specifically in this dataset can have people interpret it differently.
+specifically in this data set can have people interpret it differently.
 For example, if a designer visualized the data on a map in some way, it
 may be easier to see compared to if the designer visualized the data on
 just bar graphs.</p>
 <p><strong>Policy Makers</strong></p>
-<p>The implications of policy makers specifically in this dataset would
+<p>The implications of policy makers specifically in this data set would
 be the abortion laws in specific states. Due to these laws being made or
 revoked, the data may not be all inclusive as there may be those not
 willing to share their experience if abortion is illegal in a specific
@@ -548,16 +556,16 @@ state.</p>
 </div>
 <div id="limitations-challenges" class="section level3">
 <h3>Limitations &amp; Challenges</h3>
-<p>When working with a dataset that represents the duration from cities
-to abortion clincis, there are several challenges and limitations that
+<p>When working with a data set that represents the duration from cities
+to abortion clinics, there are several challenges and limitations that
 need to be carefully considered and addressed to ensure its accuracy. To
 start, one challenge would be privacy matters. When collecting data
 about this sensitive topic of abortion, there may be people who wouldn’t
 want their information collected–especially if abortion is illegal in
 their state. This may cause a challenge as the data can be incomplete
-and inaccurate. Another limitation of this dataset is that the
+and inaccurate. Another limitation of this data set is that the
 geographical coverage of the United States doesn’t include Alaska or
-Hawaii. Although this dataset is about driving duration, it ignores
+Hawaii. Although this data set is about driving duration, it ignores
 Alaska or Hawaii since they see these states “require air travel”.
 Although this can be a valid argument, the states of Alaska and Hawaii
 still can have abortion clinics within them. Those who are interested in

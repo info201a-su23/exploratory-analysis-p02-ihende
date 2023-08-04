@@ -7,9 +7,9 @@ output: html_document
 
 ### Authors
 
-Isabelle Henderson
-Laila Gmerek
-Chelsey Alcala
+Isabelle Henderson,
+Laila Gmerek,
+Chelsey Alcala,
 Joy Aoanan
 
 ### Date
@@ -130,14 +130,11 @@ source("Table Summary.R")
 ```
 ### Chart 1
 
-Include a chart
-
-Describe why you chose this chart and what information it reveals
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-```{r, echo = FALSE, code = readLines("chart1_example.R")}
+```{r, echo = FALSE, code = readLines("First Chart.R")}
+max_value
 ```
+
+The maximum value is `r max_value_function()` hours
 
 ### Chart 2
 

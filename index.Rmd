@@ -169,11 +169,14 @@ my_plot
  
 The maximum value is `r max_value_function()` hours
 
-### Chart 2
+### Chart 2: Gestation Duration for the cities within a known right wing state; Alabama
 
-Include a chart
+```{r, echo = FALSE, message=FALSE, warning=FALSE}
+source("Second Chart.R")
+alabamaGraph
+```
 
-Describe why you chose this chart and what information it reveals
+I chose this chart because I wanted to see how accessible abortion clinics are in a known right wing state. This chart reveal that those whom are pregnant 8 weeks or more are force commute longer hours if they decide to have an abortion. 
 
 ## Chart 3: Gestation Duration for Selected Cities
 ```{r, echo = FALSE, message=FALSE, warning=FALSE}

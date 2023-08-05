@@ -139,13 +139,13 @@ Write a summary paragraph of findings that includes the 5 values calculated from
 ### Table
 
 I included this table to show which locations are the furthest drive (in hours) away from a clinic that will perform an abortion at 12 weeks gestation. In this table, it shows the top 20 cities with the greatest driving time from said clinics. One particular pattern to notice is that 7 out of 20 of the cities in this table are in Texas. A majority of these locations are somewhere in the Midwest in "Red" states, or states with higher republican populations. This can indicate political influence on policies regarding abortion and how accessible these clinics are in these areas.
-```{r, echo = FALSE, code = readLines("Table Summary.R")}
-source("Table Summary.R")
+```{r pressure, echo=F,code = readLines("Table Summary.R")}
 ```
-### Chart 1
 
-```{r, echo = FALSE, code = readLines("First Chart.R")}
-max_value
+### Chart 1
+This chart shows drivng hours during ≤ 8 weeks of gestation in 48 states
+
+```{r echo = F, code = readLines("First Chart.R",)}
 ```
 
 The maximum value is `r max_value_function()` hours

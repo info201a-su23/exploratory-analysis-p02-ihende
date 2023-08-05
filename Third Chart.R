@@ -1,6 +1,3 @@
-
-setwd("~/Desktop/info201_summer2023/exploratory-analysis-p02-ihende/")
-
 my_data <- read.csv("cities.csv")
 
 # Load necessary libraries

@@ -5,6 +5,7 @@ output: html_document
 
 ```{r setup, include = FALSE}
 source("First Chart.R")
+source("Calc summary.R")
 ```
 
 ## How Far is Too Far - Abortion Clinics Dataset
@@ -136,7 +137,17 @@ When working with a data set that represents the duration from cities to abortio
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+A lot of cities in United States don't have equal opportunities to access abortion clinic. 
+
+1. For example there are `r CitiesWithoutClinicAccessIn8hrs` cities that don't access to an abortion clinic within an hour if they are 8 week pregnant. 
+
+2. This means that there a total of `r totalPeople` people that don't have access to a abortion clinic within an hour.
+
+3. The longest drive for someone who is 8 weeks pregnant would be `r longestDriveforCitiesIf8` hours.
+
+4. This record below to `r CitiesWithLongestDrive$city`. 
+
+5. And this city have a population of `r CitiesWithLongestDrive$population` people.
 
 ### Table
 

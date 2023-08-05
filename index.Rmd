@@ -48,7 +48,17 @@ What are possible limitations or problems with this data?   (at least 200 words)
 Assuming you answer your research questions, briefly describe the expected or possible implications for technologists, designers, and policymakers. (at least 150 words)
 
 ### Limitations & Challenges
-What challenges or limitations might you need to address with your project idea more broadly? Briefly discuss. (at least 150 words)
+As we embark on our project, there are several challenges and limitations that we need to be mindful of to ensure the success and validity of our analyses. First and foremost, the quality and integrity of the dataset we have chosen need to be carefully examined. Data may contain errors, missing values, or biases that could impact the reliability of our findings. We must conduct thorough data cleaning and preprocessing to address these issues and avoid drawing erroneous conclusions.
+
+Another challenge we may face is the limited scope of the dataset. Depending on the size and diversity of the data, certain patterns and insights may be challenging to uncover. We need to be cautious in making generalizations based on a limited dataset and consider the potential need for additional data sources to gain a more comprehensive understanding of the problem at hand.
+
+Furthermore, the nature of our data might introduce ethical concerns and privacy issues. If the dataset contains sensitive information, we must ensure proper anonymization and adhere to data protection regulations to safeguard individual privacy.
+
+Moreover, our project may be impacted by external factors beyond our control. Changes in the environment, economy, or user behavior can influence the data and invalidate our analyses. Thus, we should be prepared to adapt our methods and interpretations accordingly.
+
+Lastly, as a team, effective collaboration is crucial to the success of our project. Coordinating efforts, ensuring version control, and integrating individual contributions can be challenging but essential for a cohesive and coherent final report.
+
+In conclusion, recognizing and addressing these challenges and limitations will be vital in conducting a robust and insightful analysis for our project. We must remain vigilant, communicate effectively, and be prepared to make adjustments as needed to deliver a successful and meaningful outcome.
 
 ### Summary Information
 
@@ -77,8 +87,32 @@ Include a chart
 
 Describe why you chose this chart and what information it reveals
 
-### Chart 3
+## Chart 3: Gestation Duration for Selected Cities
+```{r, echo = FALSE, message=FALSE, warning=FALSE}
+# Set the CRAN mirror to a specific location
+options(repos = c(CRAN = "https://cran.rstudio.com/"))
 
-Include a chart
+# Include the R code from the external script
+source("Third Chart.R")
+```
 
-Describe why you chose this chart and what information it reveals
+Description:
+The bar chart above displays the gestation durations for a subset of selected cities. The x-axis represents the cities, and the y-axis displays the gestation duration in weeks.
+
+To improve chart readability, we opted to showcase a random subset of 10 cities from the larger dataset. The purpose of this chart is to provide a glimpse into how gestation durations differ across these selected cities.
+
+Insights:
+From the chart, we can observe the variation in gestation durations among the selected cities. Each bar represents a city, and the height of the bar corresponds to the gestation duration in weeks.
+
+The unique visualization type of a bar chart effectively communicates the gestation durations for each city, allowing for easy comparison. The chart reveals the range of gestation durations, providing insights into potential differences across cities.
+
+Please note that this chart offers a condensed overview, and further investigation may be required to explore the patterns and factors influencing gestation durations in different cities. As the cities were randomly selected, individual city-level insights should be interpreted with caution.
+
+The visualization type chosen, i.e., the bar chart, is suitable for representing discrete data, such as the gestation durations for different cities. The use of bars with varying heights provides a clear and interpretable graphical encoding of the gestation duration data.
+
+As the chart focuses on a subset of cities, a legend is not applicable in this context, as there is only one variable being represented (gestation duration). The absence of a legend contributes to the simplicity and clarity of the chart.
+
+In conclusion, this bar chart effectively presents the gestation durations of a random subset of cities, allowing for quick comparisons and insights into the variations across the selected cities. However, for a comprehensive understanding, further analysis and exploration are recommended. 
+
+---
+

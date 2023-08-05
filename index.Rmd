@@ -3,51 +3,118 @@ title: "Exploratory Analysis"
 output: html_document
 ---
 
-## Project title
-
-Give your project a concise, interesting title that summarizes the entirety of your project
+## How Far is Too Far - Abortion Clinics Dataset
 
 ### Authors
 
-Names of your team members
+Isabelle Henderson,
+Laila Gmerek,
+Chelsey Alcala,
+Joy Aoanan
 
 ### Date
 
-Winter 2022
+Summer 2023
 
 ### Abstract
 
-No more than three sentences that summarize your project. Focus on the very most important aspects. For example: (1) "Our main question is .... This question is important because .... To address the question, we will ...." (2) "We are concerned with ..., because .... To address this concern, we plan to ...." (3) "Consider that .... This is important because .... Accordingly, we plan to ...."
+Our main focus question regards location of clinics and the accessibility of abortion care. We are concerned with this topic because abortion is very politically controversial which had caused policies and regulations to allow/disallow abortion care in certain locations. To address these disparities we plan to use and analyze this data set that presents key information on the accessibility of abortion clinics from various locations in the United States.
 
 ### Keywords
 
-3-5 keywords that summarize your project.
-(e.g., "Keywords: human physiology; bicycle exercise; Gen Z; times-series data")
+Women's healthcare; location data; accessibility; abortion access
 
 ### Introduction  
 
-Briefly introduce your project.  Include 3-5 research questions. What motivates the questions? Why are they important? (at least 200 words)
+Research questions:
+1. What are the geographical disparities in abortion clinic access across various regions or states?
+2. What patterns or trends can be seen in locations with more policies and regulations surrounding abortion care?
+3. How are travel times to clinics affected by the prominent political parties in certain locations?
+
+All of these questions are motivated by the desire to understand the clear disparities that have been created surrounding women’s healthcare and specifically abortions. In a pursuit of investigating a woman’s right to bodily autonomy, analyzing the data set with the lenses of these questions will help us understand more about the geographical differences in abortion access. This is particularly important because of increasing controversy regarding this topic in light of the overturning of **Roe v. Wade**. As a topic that has been politicized, it’s important to understand the effects that political regulations concerning abortions have on the women who try and receive that care. It is an issue of women’s rights and the politics surrounding women’s health care. Abortion access also has profound socioeconomic impacts, and its legality in different locations can affect the status of individuals, families, and communities. The importance of the topic lies in its implications for women’s lives and public health, and investigating the accessibility of abortion care by location will help us understand this.
 
 ### Related Work  
 
-Describe your topic and related work in this space. You must include 3 citations to related work (URLs to similar work, high quality articles from the popular press, research papers, etc. ) Please use a standard citation style of your choice. (at least 200 words)
+This study focuses on data representing travel duration from cities to abortion clinics in the United States. The data set includes information from clinics, excluding hospitals and physicians, which account for about 95% of annual abortions. Researchers obtained clinic locations from the Safe Place Project and manually collected the current operating status of each clinic. Details on the maximum number of weeks into a pregnancy that clinics offer abortion services were sourced from clinic websites or direct calls. The data set comprises 623 operating clinics, with only two missing detailed timing information, considered to have minimal impact. Alaska and Hawaii were excluded due to air travel requirements. Abortion procedure timing was categorized into four groups: 8 weeks, 12 weeks, 16 weeks, and 20 weeks. Driving times were calculated from approximately 4,500 equidistant points, finding the nearest clinic and measuring travel times to the six closest clinics. City-specific data included cities with >50,000 population (based on 2015 data).
+
+
+1. > “Increasing Access to Abortion.” ACOG, www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2020/12/increasing-access-to-abortion. Accessed 27 July 2023. 
+
+
+2. > Simmons-Duffin, Selena, and Shelly Cheng. “How Many Miles Do You Have to Travel to Get Abortion Care? One Professor Maps It.” NPR, 21 June 2023, www.npr.org/sections/health-shots/2023/06/21/1183248911/abortion-access-distance-to-care-travel-miles. 
+
+
+3. > SK;, Henshaw. “The Accessibility of Abortion Services in the United States.” Family Planning Perspectives, pubmed.ncbi.nlm.nih.gov/1786805/. Accessed 27 July 2023. 
+
 
 ### The Dataset
 
-Where did you find the data? Please include a link to the data source  
-Who collected the data?  
-How was the data collected or generated?  
+ Where did you find the data? Please include a link to the data source  
+The data we used was published in an essay in September 2917 called "How far is too far? an analysis of driving times to abortion clinics in the US". Here is the link: https://pudding.cool/2017/09/clinics/
+
+ Who collected the data?  
+Russell Goldenberg was likely involved in collecting the data
+
+How was the data collected or generated? 
+
+ - Data Source: The data comes from clinics that provide abortion services in the US. It excluded hospitals and physicians and focused only on clinics.
+ 
+ - Clinic Location: The location of the clinics were obtained from the Safe Place Project
+ 
+ - Current Operating Status: The current operating status of each clinic was obtained manually, likely through direct contact with the clinics.
+ 
+ - Timing Information: Detailed information regarding timing cut-offs on procedures, i.e., the maximum number of weeks into a pregnancy that each clinic will provide abortion services, were collected. This information was found on each clinic's website or by directly contacting the clinic.
+ 
+ - Geographical Coverage: The data is applicable to the contiguous United States. Alaska and Hawaii were excluded since they often require air travel, and the focus of the analysis was on driving times.
+ 
+ - Trimester Breakdown: The timing of abortion procedures was divided into four categories: 8 weeks, 12 weeks, 16 weeks, and 20 weeks. The first two groups fall within the first trimester, and the last two fall within the second trimester.
+ 
+ - Geographical Points: To determine driving times, the contiguous US was divided into approximately 4,500 equidistant points.
+ 
+ - Nearest Clinic: For each geographical point, the nearest clinic providing abortion services was identified.
+ 
+ - Driving Time Calculation: The driving times to the six nearest clinics were calculated for each geographical point. In cases where no roads existed within a 20-mile radius of a point, the clinic distance from a neighboring point was used. The round-trip driving times were rounded down to the nearest hour.
+ 
+ - Population Filter: City-specific data included only cities with a population greater than 50,000 as of 2015.
+ 
+The resulting data set, contained in the "cities.csv" file, provides information for each city, including city name, state, city population (as of 2015), latitude, longitude, and driving duration to the nearest clinic at various stages of pregnancy (8 weeks, 12 weeks, 16 weeks, and 20 weeks+).
+
 Why was the data collected?  
+The primary objective was to examine the driving duration from various cities to abortion clinics in the United States at different stages of pregnancy.
+
 How many observations (rows) are in your data?  
+3
+
 How many features (columns) are in the data?  
+14
+
 What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-What are possible limitations or problems with this data?   (at least 200 words)
+
+
+1. What are the main factors influencing the accessibility of abortion clinics in different regions?
+2. How does the geographical distribution of abortion clinics affect women's reproductive choices and healthcare outcomes?
+3. How can policymakers address the disparities in abortion clinic accessibility to ensure equitable reproductive healthcare access for all woman?
+
+What are possible limitations or problems with this data?
+
+The data collected for the analysis of driving times to abortion clinics in the US provides valuable insights, but it has several limitations. Firstly, the data set excludes hospitals and physicians, potentially leading to an incomplete representation of abortion service accessibility. Additionally, the timing information relies on data obtained from clinics' websites or through direct contact, which may introduce inaccuracies due to potential changes in procedures over time. The geographic coverage is limited to the contiguous US, excluding Alaska and Hawaii, which may overlook unique challenges faced by individuals in these states. Moreover, the data set filters out cities with populations below 50,000, neglecting the experiences of people in smaller towns and rural areas. The driving time calculations are based on equidistant points, assuming departure from those specific locations, potentially not reflecting real-world travel patterns. Inaccuracies in the road network data could further affect driving time estimates. Missing timing information for two clinics and the temporal applicability of the data as of August 2017 add uncertainty to the findings. Finally, the analysis solely focuses on driving times, disregarding other critical factors influencing accessibility, such as public transportation options, cost, legal restrictions, and social barriers. Researchers and readers should interpret the results with caution and consider these limitations to gain a more comprehensive understanding of abortion service accessibility in the US.
 
 ### Implications
 
-Assuming you answer your research questions, briefly describe the expected or possible implications for technologists, designers, and policymakers. (at least 150 words)
+**Technologist**
+
+The implications of technologist in this data set can affect the way the data is collected. For example, in this data set, the information is collected on the clinic’s website or just by calling in. To make this data more streamline, technologist could have provided one way to receive this data.
+
+**Designers**
+
+The implications of designers could be how the data is visually communicated to the audience. Based on the way they visualize the data, specifically in this data set can have people interpret it differently. For example, if a designer visualized the data on a map in some way, it may be easier to see compared to if the designer visualized the data on just bar graphs.
+
+**Policy Makers**
+
+The implications of policy makers specifically in this data set would be the abortion laws in specific states. Due to these laws being made or revoked, the data may not be all inclusive as there may be those not willing to share their experience if abortion is illegal in a specific state. 
 
 ### Limitations & Challenges
+<<<<<<< HEAD
 As we embark on our project, there are several challenges and limitations that we need to be mindful of to ensure the success and validity of our analyses. First and foremost, the quality and integrity of the dataset we have chosen need to be carefully examined. Data may contain errors, missing values, or biases that could impact the reliability of our findings. We must conduct thorough data cleaning and preprocessing to address these issues and avoid drawing erroneous conclusions.
 
 Another challenge we may face is the limited scope of the dataset. Depending on the size and diversity of the data, certain patterns and insights may be challenging to uncover. We need to be cautious in making generalizations based on a limited dataset and consider the potential need for additional data sources to gain a more comprehensive understanding of the problem at hand.
@@ -59,6 +126,11 @@ Moreover, our project may be impacted by external factors beyond our control. Ch
 Lastly, as a team, effective collaboration is crucial to the success of our project. Coordinating efforts, ensuring version control, and integrating individual contributions can be challenging but essential for a cohesive and coherent final report.
 
 In conclusion, recognizing and addressing these challenges and limitations will be vital in conducting a robust and insightful analysis for our project. We must remain vigilant, communicate effectively, and be prepared to make adjustments as needed to deliver a successful and meaningful outcome.
+=======
+
+When working with a data set that represents the duration from cities to abortion clinics, there are several challenges and limitations that need to be carefully considered and addressed to ensure its accuracy. To start, one challenge would be privacy matters. When collecting data about this sensitive topic of abortion, there may be people who wouldn’t want their information collected–especially if abortion is illegal in their state. This may cause a challenge as the data can be incomplete and inaccurate. Another limitation of this data set is that the geographical coverage of the United States doesn’t include Alaska or Hawaii. Although this data set is about driving duration, it ignores Alaska or Hawaii since they see these states “require air travel”. Although this can be a valid argument, the states of Alaska and Hawaii still can have abortion clinics within them. Those who are interested in finding the duration of abortion clinics from cities in Alaska or Hawaii won’t be able to see anything represented.
+
+>>>>>>> ab44ede436a84acd9a68f2244de99600aad197c6
 
 ### Summary Information
 
@@ -66,20 +138,17 @@ Write a summary paragraph of findings that includes the 5 values calculated from
 
 ### Table
 
-Include a table of aggregate information
-
-Describe why you included the table and what information it reveals
-
+I included this table to show which locations are the furthest drive (in hours) away from a clinic that will perform an abortion at 12 weeks gestation. In this table, it shows the top 20 cities with the greatest driving time from said clinics. One particular pattern to notice is that 7 out of 20 of the cities in this table are in Texas. A majority of these locations are somewhere in the Midwest in "Red" states, or states with higher republican populations. This can indicate political influence on policies regarding abortion and how accessible these clinics are in these areas.
+```{r, echo = FALSE, code = readLines("Table Summary.R")}
+source("Table Summary.R")
+```
 ### Chart 1
 
-Include a chart
-
-Describe why you chose this chart and what information it reveals
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+```{r, echo = FALSE, code = readLines("First Chart.R")}
+max_value
 ```
+
+The maximum value is `r max_value_function()` hours
 
 ### Chart 2
 

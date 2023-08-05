@@ -3,6 +3,10 @@ title: "Exploratory Analysis"
 output: html_document
 ---
 
+```{r setup, include = FALSE}
+source("First Chart.R")
+```
+
 ## How Far is Too Far - Abortion Clinics Dataset
 
 ### Authors
@@ -114,10 +118,9 @@ The implications of designers could be how the data is visually communicated to 
 The implications of policy makers specifically in this data set would be the abortion laws in specific states. Due to these laws being made or revoked, the data may not be all inclusive as there may be those not willing to share their experience if abortion is illegal in a specific state. 
 
 ### Limitations & Challenges
-<<<<<<< HEAD
 As we embark on our project, there are several challenges and limitations that we need to be mindful of to ensure the success and validity of our analyses. First and foremost, the quality and integrity of the dataset we have chosen need to be carefully examined. Data may contain errors, missing values, or biases that could impact the reliability of our findings. We must conduct thorough data cleaning and preprocessing to address these issues and avoid drawing erroneous conclusions.
 
-Another challenge we may face is the limited scope of the dataset. Depending on the size and diversity of the data, certain patterns and insights may be challenging to uncover. We need to be cautious in making generalizations based on a limited dataset and consider the potential need for additional data sources to gain a more comprehensive understanding of the problem at hand.
+Another challenge we may face is the limited scope of the data set. Depending on the size and diversity of the data, certain patterns and insights may be challenging to uncover. We need to be cautious in making generalizations based on a limited dataset and consider the potential need for additional data sources to gain a more comprehensive understanding of the problem at hand.
 
 Furthermore, the nature of our data might introduce ethical concerns and privacy issues. If the dataset contains sensitive information, we must ensure proper anonymization and adhere to data protection regulations to safeguard individual privacy.
 
@@ -126,11 +129,10 @@ Moreover, our project may be impacted by external factors beyond our control. Ch
 Lastly, as a team, effective collaboration is crucial to the success of our project. Coordinating efforts, ensuring version control, and integrating individual contributions can be challenging but essential for a cohesive and coherent final report.
 
 In conclusion, recognizing and addressing these challenges and limitations will be vital in conducting a robust and insightful analysis for our project. We must remain vigilant, communicate effectively, and be prepared to make adjustments as needed to deliver a successful and meaningful outcome.
-=======
+
 
 When working with a data set that represents the duration from cities to abortion clinics, there are several challenges and limitations that need to be carefully considered and addressed to ensure its accuracy. To start, one challenge would be privacy matters. When collecting data about this sensitive topic of abortion, there may be people who wouldn’t want their information collected–especially if abortion is illegal in their state. This may cause a challenge as the data can be incomplete and inaccurate. Another limitation of this data set is that the geographical coverage of the United States doesn’t include Alaska or Hawaii. Although this data set is about driving duration, it ignores Alaska or Hawaii since they see these states “require air travel”. Although this can be a valid argument, the states of Alaska and Hawaii still can have abortion clinics within them. Those who are interested in finding the duration of abortion clinics from cities in Alaska or Hawaii won’t be able to see anything represented.
 
->>>>>>> ab44ede436a84acd9a68f2244de99600aad197c6
 
 ### Summary Information
 
@@ -139,15 +141,21 @@ Write a summary paragraph of findings that includes the 5 values calculated from
 ### Table
 
 I included this table to show which locations are the furthest drive (in hours) away from a clinic that will perform an abortion at 12 weeks gestation. In this table, it shows the top 20 cities with the greatest driving time from said clinics. One particular pattern to notice is that 7 out of 20 of the cities in this table are in Texas. A majority of these locations are somewhere in the Midwest in "Red" states, or states with higher republican populations. This can indicate political influence on policies regarding abortion and how accessible these clinics are in these areas.
-```{r pressure, echo=F,code = readLines("Table Summary.R")}
+
+```{r, echo = FALSE, message=FALSE, warning=FALSE}
+source("Table Summary.R")
+kable(agg_table)
 ```
+
 
 ### Chart 1
-This chart shows drivng hours during ≤ 8 weeks of gestation in 48 states
+This chart shows driving hours during ≤ 8 weeks of gestation in 48 states
 
-```{r echo = F, code = readLines("First Chart.R",)}
+```{r, echo = FALSE, message=FALSE, warning=FALSE}
+source("First Chart.R")
+my_plot
 ```
-
+ 
 The maximum value is `r max_value_function()` hours
 
 ### Chart 2
@@ -184,4 +192,3 @@ As the chart focuses on a subset of cities, a legend is not applicable in this c
 In conclusion, this bar chart effectively presents the gestation durations of a random subset of cities, allowing for quick comparisons and insights into the variations across the selected cities. However, for a comprehensive understanding, further analysis and exploration are recommended. 
 
 ---
-

@@ -3,9 +3,9 @@ title: "Exploratory Analysis"
 output: html_document
 ---
 
-```{r setup, include = FALSE}
-source("First Chart.R")
+```{r setup, include=FALSE}
 source("Calc summary.R")
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## How Far is Too Far - Abortion Clinics Dataset
